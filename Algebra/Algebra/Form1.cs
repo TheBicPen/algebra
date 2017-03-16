@@ -120,6 +120,11 @@ namespace Algebra
 
         private void button17_Click(object sender, EventArgs e)
         {
+            NegativeInput(positive);
+        }
+
+        public bool NegativeInput(bool positive)
+        {
             if (positive)
             {
                 textBox1.Text = "-" + textBox1.Text;
@@ -130,6 +135,7 @@ namespace Algebra
                 textBox1.Text = textBox1.Text.TrimStart("-".ToCharArray());
                 positive = true;
             }
+            return positive;
         }
     }
 }
