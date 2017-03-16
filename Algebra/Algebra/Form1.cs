@@ -15,8 +15,8 @@ namespace Algebra
         /*to do: 
         create button for negative numbers, move equals button
         add clear and clear error buttons    
-        add overflow exceptions, "what are you counting, ''?"
-            
+        add overflow exceptions, "what are you counting, ''?", add PROPER error messages
+        fix exception catching
         */
 
 
@@ -67,18 +67,16 @@ namespace Algebra
 
             catch (Exception ParseFail)
             {
-                if (ParseFail is FormatException || ParseFail is ArgumentNullException)
+                if (ParseFail is OverflowException)
                 {
-                    throw;
+                    MessageBox.Show("Use a smaller number you dingus!");
                 }
             }
 
-            catch ()
-
-            textBox2.AppendText(textBox1.Text + "\r \n");
-
-            textBox1.Text = (LastOperator);
-            
+            textBox2.AppendText(LastNumber + "\r\n" + LastOperator + "\r\n");
+            textBox1.Text = ("");
+            Numbers[OperationCounter] = LastNumber;
+            Operators[OperationCounter] = LastOperator;
             OperationCounter++;
 
         }
