@@ -124,10 +124,12 @@ namespace Algebra
             if (positive)
             {
                 textBox1.Text = "-" + textBox1.Text;
+                positive = false;
             }
             else if (positive != true)
             {
-                textBox1.Text.TrimStart("-".ToCharArray());
+                textBox1.Text = textBox1.Text.TrimStart("-".ToCharArray());
+                positive = true;
             }
         }
     }
