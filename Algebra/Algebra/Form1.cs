@@ -13,7 +13,7 @@ namespace Algebra
     public partial class Form1 : Form
     {
         /*to do: 
-        create button for negative numbers, move equals button
+        create button for negative numbers, move equals button to bottom
         add clear and clear error buttons    
         add overflow exceptions, "what are you counting, ''?", add PROPER error messages
         fix exception catching
