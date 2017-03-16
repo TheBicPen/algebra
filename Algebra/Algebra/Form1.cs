@@ -36,7 +36,7 @@ namespace Algebra
         {
             InitializeComponent();
 
-            //create event handlers for the buttons; redundant for now
+            //create event handlers for the buttons, manual for now
             button1.Click += new EventHandler(NumberButtonClick);
             button2.Click += new EventHandler(NumberButtonClick);
             button3.Click += new EventHandler(NumberButtonClick);
@@ -63,6 +63,7 @@ namespace Algebra
         {
             LastOperator = (sender as Button).Text;
             StoreInput();
+            textBox2.AppendText(LastNumber + "\r\n" + LastOperator + "\r\n");
         }
 
         private void StoreInput()
@@ -80,7 +81,7 @@ namespace Algebra
                 }
             }
 
-            textBox2.AppendText(LastNumber + "\r\n" + LastOperator + "\r\n");
+
             textBox1.Text = ("");
             Numbers[OperationCounter] = LastNumber;
             Operators[OperationCounter] = LastOperator;
@@ -99,14 +100,14 @@ namespace Algebra
             StoreInput();
             for (LastOperation = 0; LastOperation < OperationCounter; LastOperation++)
             {
-                if (Operators[OperationCounter] == "+")
-                { Output = Numbers[OperationCounter] + Numbers[OperationCounter + 1]; }
-                else if (Operators[OperationCounter] == "-")
-                { Output = Numbers[OperationCounter] - Numbers[OperationCounter + 1]; }
-                else if (Operators[OperationCounter] == "*")
-                { Output = Numbers[OperationCounter] * Numbers[OperationCounter + 1]; }
-                else if (Operators[OperationCounter] == "/")
-                { Output = Numbers[OperationCounter] / Numbers[OperationCounter + 1]; }
+                if (Operators[LastOperation] == "+")
+                { Output = Numbers[LastOperation] + Numbers[LastOperation + 1]; }
+                else if (Operators[LastOperation] == "-")
+                { Output = Numbers[LastOperation] - Numbers[LastOperation + 1]; }
+                else if (Operators[LastOperation] == "*")
+                { Output = Numbers[LastOperation] * Numbers[LastOperation + 1]; }
+                else if (Operators[LastOperation] == "/")
+                { Output = Numbers[LastOperation] / Numbers[LastOperation + 1]; }
 
             }
             textBox1.Text = Output.ToString();
