@@ -29,7 +29,7 @@ namespace Algebra
         int OperationCounter = 0; //counts the number of operations done
         int LastOperation; //for use in a "for" loop
 
-        decimal[] Numbers = new decimal[16];
+        decimal[] Numbers = new decimal[16]; //maximum of 16 operations
         string[] Operators = new string[16];
 
         public Form1()
@@ -98,7 +98,7 @@ namespace Algebra
         private void button12_Click(object sender, EventArgs e) //this is the equals button
         {
             StoreInput();
-            for (LastOperation = 0; LastOperation + 2 <= OperationCounter; LastOperation++)
+            for (LastOperation = 0; LastOperation + 1 < OperationCounter; LastOperation++)
             {
                 if (Operators[LastOperation] == "+")
                 { Output = Numbers[LastOperation] + Numbers[LastOperation + 1]; }
