@@ -47,6 +47,7 @@
             this.button16 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -214,10 +215,9 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(58, 48);
-            this.textBox1.Multiline = true;
+            this.textBox1.Location = new System.Drawing.Point(58, 431);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(312, 430);
+            this.textBox1.Size = new System.Drawing.Size(312, 32);
             this.textBox1.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -238,14 +238,13 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(106, 344);
             this.tableLayoutPanel2.TabIndex = 2;
-            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
             // button15
             // 
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.Location = new System.Drawing.Point(3, 194);
+            this.button15.Location = new System.Drawing.Point(3, 175);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(100, 61);
+            this.button15.Size = new System.Drawing.Size(100, 80);
             this.button15.TabIndex = 3;
             this.button15.Tag = "";
             this.button15.Text = "*";
@@ -284,11 +283,21 @@
             this.button14.Text = "-";
             this.button14.UseVisualStyleBackColor = true;
             // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(58, 98);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(312, 327);
+            this.textBox2.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 555);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -322,6 +331,7 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 
