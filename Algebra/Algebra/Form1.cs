@@ -24,8 +24,10 @@ namespace Algebra
         //variables
         string LastOperator; //the last operator that was inputted
         decimal LastNumber;
+        decimal Output;
 
         int OperationCounter = 0; //counts the number of operations done
+        int LastOperation; //for use in a "for" loop
 
         decimal[] Numbers = new decimal[16];
         string[] Operators = new string[16];
@@ -60,7 +62,11 @@ namespace Algebra
         private void OperatorButtonClick(object sender, EventArgs e)
         {
             LastOperator = (sender as Button).Text;
+            StoreInput();
+        }
 
+        private void StoreInput()
+        {
             try
             {
                 LastNumber = decimal.Parse(textBox1.Text);
@@ -79,7 +85,6 @@ namespace Algebra
             Numbers[OperationCounter] = LastNumber;
             Operators[OperationCounter] = LastOperator;
             OperationCounter++;
-
         }
 
         private void NumberButtonClick(object sender, EventArgs e)
@@ -91,7 +96,20 @@ namespace Algebra
 
         private void button12_Click(object sender, EventArgs e) //this is the equals button
         {
+            StoreInput();
+            for (LastOperation = 0; LastOperation < OperationCounter; LastOperation++)
+            {
+                if (Operators[OperationCounter] == "+")
+                { Output = Numbers[OperationCounter] + Numbers[OperationCounter + 1]; }
+                else if (Operators[OperationCounter] == "-")
+                { Output = Numbers[OperationCounter] - Numbers[OperationCounter + 1]; }
+                else if (Operators[OperationCounter] == "*")
+                { Output = Numbers[OperationCounter] * Numbers[OperationCounter + 1]; }
+                else if (Operators[OperationCounter] == "/")
+                { Output = Numbers[OperationCounter] / Numbers[OperationCounter + 1]; }
 
+            }
+            textBox1.Text = Output.ToString();
         }
 
     }
