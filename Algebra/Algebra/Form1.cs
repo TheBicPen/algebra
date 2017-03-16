@@ -120,10 +120,10 @@ namespace Algebra
 
         private void button17_Click(object sender, EventArgs e)
         {
-            NegativeInput(positive);
+            NegativeInput();
         }
 
-        public bool NegativeInput(bool positive)
+        public bool NegativeInput()
         {
             if (positive)
             {
