@@ -12,13 +12,21 @@ namespace Algebra
 {
     public partial class Form1 : Form
     {
+        /*to do: 
+        create button for negative numbers, move equals button
+        add clear and clear error buttons    
+        add overflow exceptions, "what are you counting, ''?"
+            
+        */
+
 
         //variables
         string LastOperator; //the last operator that was inputted
+        decimal LastNumber;
 
         int OperationCounter = 0; //counts the number of operations done
 
-        decimal[] Operations = new decimal[16];
+        decimal[] Numbers = new decimal[16];
         string[] Operators = new string[16];
 
         public Form1()
@@ -52,11 +60,24 @@ namespace Algebra
         {
             LastOperator = (sender as Button).Text;
 
+            try
+            {
+                LastNumber = decimal.Parse(textBox1.Text);
+            }
+
+            catch (Exception ParseFail)
+            {
+                if (ParseFail is FormatException || ParseFail is ArgumentNullException)
+                {
+                    throw;
+                }
+            }
+
+            catch ()
+
             textBox2.AppendText(textBox1.Text + "\r \n");
 
             textBox1.Text = (LastOperator);
-
-          //  Operations[OperationCounter] = textBox1.Text;
             
             OperationCounter++;
 
