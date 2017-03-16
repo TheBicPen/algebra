@@ -17,6 +17,7 @@ namespace Algebra
         add clear and clear error buttons    
         add overflow exceptions, "what are you counting, ''?", add PROPER error messages
         fix exception catching
+        add order of operations toggle
         */
 
 
