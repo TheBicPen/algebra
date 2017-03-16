@@ -26,6 +26,8 @@ namespace Algebra
         decimal LastNumber;
         decimal Output;
 
+        bool positive = true; //used for toggling the negative button
+
         int OperationCounter = 0; //counts the number of operations done
         int LastOperation; //for use in a "for" loop
 
@@ -117,5 +119,16 @@ namespace Algebra
             textBox1.Text = Output.ToString();
         }
 
+        private void button17_Click(object sender, EventArgs e)
+        {
+            if (positive)
+            {
+                textBox1.Text = "-" + textBox1.Text;
+            }
+            else if (positive != true)
+            {
+                textBox1.Text.TrimStart("-".ToCharArray());
+            }
+        }
     }
 }

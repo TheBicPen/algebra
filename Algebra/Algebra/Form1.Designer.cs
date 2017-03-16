@@ -48,6 +48,7 @@
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button17 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +60,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel1.Controls.Add(this.button12, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.button17, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.button11, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.button10, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.button9, 2, 2);
@@ -71,7 +72,7 @@
             this.tableLayoutPanel1.Controls.Add(this.button3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(529, 170);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(570, 98);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -84,9 +85,9 @@
             // button12
             // 
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(214, 261);
+            this.button12.Location = new System.Drawing.Point(58, 492);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(100, 80);
+            this.button12.Size = new System.Drawing.Size(826, 50);
             this.button12.TabIndex = 11;
             this.button12.Text = "=";
             this.button12.UseVisualStyleBackColor = true;
@@ -95,7 +96,7 @@
             // button11
             // 
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(108, 261);
+            this.button11.Location = new System.Drawing.Point(214, 261);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(100, 80);
             this.button11.TabIndex = 10;
@@ -105,7 +106,7 @@
             // button10
             // 
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(3, 261);
+            this.button10.Location = new System.Drawing.Point(108, 261);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(99, 80);
             this.button10.TabIndex = 9;
@@ -229,7 +230,7 @@
             this.tableLayoutPanel2.Controls.Add(this.button16, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.button13, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.button14, 0, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(405, 170);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(417, 98);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -292,11 +293,23 @@
             this.textBox2.Size = new System.Drawing.Size(312, 327);
             this.textBox2.TabIndex = 3;
             // 
+            // button17
+            // 
+            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.Location = new System.Drawing.Point(3, 261);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(99, 80);
+            this.button17.TabIndex = 11;
+            this.button17.Text = "(-)";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 555);
+            this.Controls.Add(this.button12);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.textBox1);
@@ -332,6 +345,7 @@
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button17;
     }
 }
 
