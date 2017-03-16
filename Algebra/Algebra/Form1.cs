@@ -32,15 +32,18 @@ namespace Algebra
             button11.Click += new EventHandler(NumberButtonClick);
             // button12.Click += new EventHandler(OperatorButtonClick);   // This button has its own event handler due to its unique function
             button13.Click += new EventHandler(OperatorButtonClick);
-            button16.Click += new EventHandler(OperatorButtonClick);
-            button15.Click += new EventHandler(OperatorButtonClick);
             button14.Click += new EventHandler(OperatorButtonClick);
+            button15.Click += new EventHandler(OperatorButtonClick);
+            button16.Click += new EventHandler(OperatorButtonClick);
 
         }
 
+
+
+
         private void OperatorButtonClick(object sender, EventArgs e)
         {
-            textBox1.AppendText("\n" + (sender as Button).Text);
+            textBox1.AppendText(Environment.NewLine + (sender as Button).Text);
         }
 
         private void NumberButtonClick(object sender, EventArgs e)
@@ -50,7 +53,17 @@ namespace Algebra
         }
 
 
-        private void button12_Click(object sender, EventArgs e)
+        private void button12_Click(object sender, EventArgs e) //this is the equals button
+        {
+
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
         {
 
         }
