@@ -98,7 +98,7 @@ namespace Algebra
         private void button12_Click(object sender, EventArgs e) //this is the equals button
         {
             StoreInput();
-            for (LastOperation = 0; LastOperation < OperationCounter; LastOperation++)
+            for (LastOperation = 0; LastOperation + 2 <= OperationCounter; LastOperation++)
             {
                 if (Operators[LastOperation] == "+")
                 { Output = Numbers[LastOperation] + Numbers[LastOperation + 1]; }
