@@ -17,6 +17,7 @@ namespace Algebra
         add overflow exceptions, "what are you counting, ''?", add PROPER error messages
         fix exception catching
         add functioality to order of operations toggle
+        fix calculations with > 2 steps
         */
 
 
@@ -64,7 +65,7 @@ namespace Algebra
         {
             LastOperator = (sender as Button).Text;
             StoreNumber();
-            textBox2.AppendText(LastNumber + "\r\n" + LastOperator + "\r\n");
+            textBox2.AppendText(LastOperator + "\r\n");
             StoreOperator();
         }
 
@@ -113,6 +114,7 @@ namespace Algebra
             }
 
             Numbers[OperationCounter] = LastNumber;
+            textBox2.AppendText(LastNumber + "\r\n");
         }
 
 
