@@ -62,11 +62,12 @@ namespace Algebra
         private void OperatorButtonClick(object sender, EventArgs e)
         {
             LastOperator = (sender as Button).Text;
-            StoreInput();
+            StoreNumber();
             textBox2.AppendText(LastNumber + "\r\n" + LastOperator + "\r\n");
+            StoreOperator();
         }
 
-        private void StoreInput()
+        private void StoreNumber()
         {
             try
             {
@@ -81,9 +82,12 @@ namespace Algebra
                 }
             }
 
-
-            textBox1.Text = ("");
             Numbers[OperationCounter] = LastNumber;
+        }
+
+        private void StoreOperator()
+        {
+            textBox1.Text = ("");
             Operators[OperationCounter] = LastOperator;
             OperationCounter++;
         }
@@ -97,8 +101,8 @@ namespace Algebra
 
         private void button12_Click(object sender, EventArgs e) //this is the equals button
         {
-            StoreInput();
-            for (LastOperation = 0; LastOperation + 1 < OperationCounter; LastOperation++)
+            StoreNumber();
+            for (LastOperation = 0; LastOperation < OperationCounter; LastOperation++)
             {
                 if (Operators[LastOperation] == "+")
                 { Output = Numbers[LastOperation] + Numbers[LastOperation + 1]; }
