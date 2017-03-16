@@ -17,72 +17,42 @@ namespace Algebra
         public Form1()
         {
             InitializeComponent();
+
+            //create event handlers for the buttons; I wonder if there is some way to automate this...
+            button1.Click += new EventHandler(NumberButtonClick);
+            button2.Click += new EventHandler(NumberButtonClick);
+            button3.Click += new EventHandler(NumberButtonClick);
+            button4.Click += new EventHandler(NumberButtonClick);
+            button5.Click += new EventHandler(NumberButtonClick);
+            button6.Click += new EventHandler(NumberButtonClick);
+            button7.Click += new EventHandler(NumberButtonClick);
+            button8.Click += new EventHandler(NumberButtonClick);
+            button9.Click += new EventHandler(NumberButtonClick);
+            button10.Click += new EventHandler(NumberButtonClick);
+            button11.Click += new EventHandler(NumberButtonClick);
+            // button12.Click += new EventHandler(OperatorButtonClick);   // This button has its own event handler due to its unique function
+            button13.Click += new EventHandler(OperatorButtonClick);
+            button16.Click += new EventHandler(OperatorButtonClick);
+            button15.Click += new EventHandler(OperatorButtonClick);
+            button14.Click += new EventHandler(OperatorButtonClick);
+
         }
-        //automate this garbage
-        private void button1_Click(object sender, EventArgs e)
+
+        private void OperatorButtonClick(object sender, EventArgs e)
         {
-            textBox1.AppendText(Tag.ToString());
+            textBox1.AppendText("\n" + (sender as Button).Text);
         }
+
+        private void NumberButtonClick(object sender, EventArgs e)
+        {
+
+            textBox1.AppendText((sender as Button).Text);
+        }
+
 
         private void button12_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            textBox1.AppendText("2");
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            textBox1.AppendText("3");
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }
