@@ -16,7 +16,7 @@ namespace Algebra
         add clear and clear error buttons    
         add overflow exceptions, "what are you counting, ''?", add PROPER error messages
         fix exception catching
-        add order of operations toggle
+        add functioality to order of operations toggle
         */
 
 
@@ -68,6 +68,35 @@ namespace Algebra
             StoreOperator();
         }
 
+
+        private void NumberButtonClick(object sender, EventArgs e)
+        {
+
+            textBox1.AppendText((sender as Button).Text);
+        }
+
+
+        private void button12_Click(object sender, EventArgs e) //this is the equals button
+        {
+            StoreNumber();
+            Calculate();
+            textBox1.Text = Output.ToString();
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            NegativeInput();
+        }
+
+
+        private void StoreOperator()
+        {
+            textBox1.Text = ("");
+            Operators[OperationCounter] = LastOperator;
+            OperationCounter++;
+        }
+
+
         private void StoreNumber()
         {
             try
@@ -86,23 +115,9 @@ namespace Algebra
             Numbers[OperationCounter] = LastNumber;
         }
 
-        private void StoreOperator()
+
+        public void Calculate()
         {
-            textBox1.Text = ("");
-            Operators[OperationCounter] = LastOperator;
-            OperationCounter++;
-        }
-
-        private void NumberButtonClick(object sender, EventArgs e)
-        {
-
-            textBox1.AppendText((sender as Button).Text);
-        }
-
-
-        private void button12_Click(object sender, EventArgs e) //this is the equals button
-        {
-            StoreNumber();
             for (LastOperation = 0; LastOperation < OperationCounter; LastOperation++)
             {
                 if (Operators[LastOperation] == "+")
@@ -115,13 +130,8 @@ namespace Algebra
                 { Output = Numbers[LastOperation] / Numbers[LastOperation + 1]; }
 
             }
-            textBox1.Text = Output.ToString();
         }
 
-        private void button17_Click(object sender, EventArgs e)
-        {
-            NegativeInput();
-        }
 
         public bool NegativeInput()
         {
