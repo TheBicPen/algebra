@@ -49,6 +49,7 @@
             this.button14 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button17 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -304,11 +305,22 @@
             this.button17.UseVisualStyleBackColor = true;
             this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(591, 41);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(151, 17);
+            this.checkBox1.TabIndex = 12;
+            this.checkBox1.Text = "Follow Order of Operations";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 555);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.tableLayoutPanel2);
@@ -346,6 +358,7 @@
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
