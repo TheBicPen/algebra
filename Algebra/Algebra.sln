@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algebra", "Algebra\Algebra.csproj", "{16DF71A4-6FB2-44FA-AC45-195E4E232AC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algebra-UI", "Algebra-UI\Algebra-UI.csproj", "{A58FB620-0123-4FD5-8202-BE180775C965}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{16DF71A4-6FB2-44FA-AC45-195E4E232AC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16DF71A4-6FB2-44FA-AC45-195E4E232AC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16DF71A4-6FB2-44FA-AC45-195E4E232AC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A58FB620-0123-4FD5-8202-BE180775C965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A58FB620-0123-4FD5-8202-BE180775C965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A58FB620-0123-4FD5-8202-BE180775C965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A58FB620-0123-4FD5-8202-BE180775C965}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6AD2CAE8-9D22-4CB3-B61A-BAD2A265161D}
 	EndGlobalSection
 EndGlobal
